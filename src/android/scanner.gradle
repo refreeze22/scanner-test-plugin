@@ -1,0 +1,8 @@
+repositories {
+    flatDir { dirs "${project.projectDir}/libs" } // app/libs
+}
+dependencies {
+    implementation(name: "scanner", ext: "aar")
+    // If the vendor ships extra JARs, either list them or:
+    // implementation fileTree(dir: 'libs', include: ['*.jar'])
+}

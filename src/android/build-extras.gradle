@@ -1,0 +1,13 @@
+// build-extras.gradle
+android {
+    // Add libs directory as a repository
+    repositories {
+        flatDir {
+            dirs 'libs'
+        }
+    }
+}
+
+dependencies {
+    implementation(name: 'scanner', ext: 'aar')
+}

@@ -1,0 +1,20 @@
+{
+    "name": "cordova-local-scanner",
+    "version": "1.0.0",
+    "description": "Cordova plugin wrapper for mylib AAR",
+    "main": "www/LocalBarcodeScanner.js",
+    "cordova": {
+        "id": "cordova-local-scanner",
+        "platforms": [
+            "android"
+        ]
+    },
+    "keywords": [
+        "cordova",
+        "android",
+        "plugin",
+        "aar"
+    ],
+    "author": "You",
+    "license": "MIT"
+}

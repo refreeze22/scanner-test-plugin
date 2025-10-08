@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="cordova-local-scanner" version="1.0.0"
+        xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <name>LocalBarcodeScanner</name>
+
+    <js-module name="LocalBarcodeScanner" src="www/LocalBarcodeScanner.js">
+        <clobbers target="cordova.plugins.LocalBarcodeScanner" />
+    </js-module>
+
+    <platform name="android">
+        <!-- Map service name to Java class -->
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="LocalBarcodeScanner">
+                <param name="android-package" value="com.oktal.localbarcodescanner.LocalBarcodeScanner" />
+            </feature>
+        </config-file>
+
+        <resource-file src="src/android/scanner.aar" target="app/libs/scanner.aar" />
+        <framework src="src/android/scanner.gradle" custom="true" type="gradleReference" />
+        <source-file src="src/android/LocalBarcodeScanner.java"
+                     target-dir="app/src/main/java/com/oktal/localbarcodescanner" />
+    </platform>
+</plugin>
